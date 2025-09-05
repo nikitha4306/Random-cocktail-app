@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= name %> | Cocktail Recipe</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= name %></h1>
+  <img src="<%= image %>" alt="<%= name %>" width="300" />
+  <h3>Category: <%= category %></h3>
+
+  <h2>Ingredients</h2>
+  <ul>
+    <% ingredients.forEach(item => { %>
+      <li><%= item.measure %> <%= item.ingredient %></li>
+    <% }) %>
+  </ul>
+
+  <h2>Instructions</h2>
+  <p><%= instructions %></p>
+
+  <a href="/"><button>Back to Home</button></a>
+</body>
+</html>
+
